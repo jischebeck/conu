@@ -17,7 +17,9 @@
 import logging
 import os
 import shutil
-import xattr
+if os.name!='nt':
+    import xattr
+
 from tempfile import mkdtemp
 
 from conu.exceptions import ConuException

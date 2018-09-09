@@ -19,7 +19,8 @@ from __future__ import print_function, unicode_literals
 import logging
 import os
 import shutil
-import pwd
+if os.name!='nt':
+    import pwd
 
 from conu.exceptions import ConuException
 from conu.utils import run_cmd, is_selinux_disabled, setfacl_command_exists, chcon_command_exists
